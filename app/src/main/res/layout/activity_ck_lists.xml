@@ -14,17 +14,22 @@
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="80dp"
+                android:paddingLeft="@dimen/margin_medium_2"
                 app:layout_collapseMode="pin">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
 
                 <ImageView
-                    android:id="@+id/iv_back"
+                    android:id="@+id/iv_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_menu_black_24dp"/>
 
                 <TextView
-                    android:id="@+id/iv_vert"
+                    android:id="@+id/iv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NEW IN"
@@ -32,55 +37,50 @@
                     android:textSize="@dimen/item_text_size"
                     />
 
+                <ImageView
+                    android:id="@+id/iv_one_item_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/one_item_view"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_below="@id/iv_menu"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_two_item_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/two_item_view"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_marginLeft="@dimen/margin_medium_3"
+                    android:layout_below="@id/iv_menu"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sortby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SORT BY"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_below="@id/iv_menu"
+                    android:layout_alignParentRight="true"
+                    />
+                </RelativeLayout>
+
             </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
-    <FrameLayout
-        android:id="@+id/fl_sortby"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/appbar"
-        android:paddingLeft="@dimen/margin_medium_2"
-        android:paddingRight="@dimen/margin_medium_2"
-        android:background="@color/primaryColor">
-
-        <ImageView
-            android:id="@+id/iv_one_item_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/one_item_view"
-            android:layout_marginTop="@dimen/margin_medium_3"
-            />
-
-        <ImageView
-            android:id="@+id/iv_two_item_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/two_item_view"
-            android:layout_marginTop="@dimen/margin_medium_3"
-            android:layout_marginLeft="@dimen/margin_medium_3"
-            />
-
-        <TextView
-            android:id="@+id/tv_sortby"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SORT BY"
-            android:layout_marginTop="@dimen/margin_medium_3"
-            android:textColor="@color/primaryTextColor"
-            android:layout_gravity="end"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            />
-
-    </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/fl_rv_oneview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_below="@+id/fl_sortby"
+        android:layout_below="@+id/appbar"
         android:background="@color/primaryColor">
 
         <android.support.v7.widget.RecyclerView
@@ -90,5 +90,6 @@
             />
 
     </FrameLayout>
+
 
 </RelativeLayout>

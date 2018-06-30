@@ -30,7 +30,7 @@
 
         </activity>
 
-        <activity android:name=".activities.CkTwoItemsViewActivity">
+        <activity android:name=".activities.CkTwoItemsViewActivity" android:theme="@style/AppTheme.NoActionBar">
 
 
         </activity>
