@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin">
+
+            <ImageView
+                android:id="@+id/iv_detail_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+            <TextView
+                android:id="@+id/tv_new_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEW IN"
+                android:layout_marginLeft="150dp"
+                android:textSize="@dimen/item_text_size"
+                />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:layout_centerHorizontal="true"
+        android:background="@color/primaryColor"
+        >
+
+    <TextView
+        android:id="@+id/tv_detail_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_card_medium_2"
+        android:text="POINTED FLAT MULES"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/item_text_size"
+        />
+
+    <ImageView
+        android:id="@+id/iv_detail_item"
+        android:layout_width="@dimen/item_list_width"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shoe"
+        android:layout_centerHorizontal="true"
+        android:background="@color/primaryColor"
+        android:layout_below="@id/tv_detail_item_name"
+        android:layout_marginTop="@dimen/margin_medium"
+
+        />
+
+    <Button
+        android:id="@+id/btn_info"
+        android:layout_width="@dimen/info_btn_width"
+        android:layout_height="wrap_content"
+        android:text="+INFO"
+        android:background="@color/primaryColor"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginLeft="@dimen/info_btn_position"
+        android:layout_below="@id/tv_detail_item_name"
+        android:textStyle="bold"
+        />
+
+        <Button
+            android:id="@+id/btn_colors"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="COLOURS"
+            android:textColor="@color/primaryColor"
+            android:rotation="-90"
+            android:background="@color/secondaryDarkColor"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="320dp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

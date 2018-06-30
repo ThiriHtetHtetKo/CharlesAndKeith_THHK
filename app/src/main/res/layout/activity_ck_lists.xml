@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        >
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/iv_vert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEW IN"
+                    android:layout_marginLeft="150dp"
+                    android:textSize="@dimen/item_text_size"
+                    />
+
+            </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_sortby"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/appbar"
+        android:paddingLeft="@dimen/margin_medium_2"
+        android:paddingRight="@dimen/margin_medium_2"
+        android:background="@color/primaryColor">
+
+        <ImageView
+            android:id="@+id/iv_one_item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/one_item_view"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            />
+
+        <ImageView
+            android:id="@+id/iv_two_item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/two_item_view"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginLeft="@dimen/margin_medium_3"
+            />
+
+        <TextView
+            android:id="@+id/tv_sortby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SORT BY"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:textColor="@color/primaryTextColor"
+            android:layout_gravity="end"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/fl_sortby"
+        android:background="@color/primaryColor">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_ckLists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </FrameLayout>
+
+</RelativeLayout>
